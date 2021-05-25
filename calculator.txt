@@ -1,0 +1,121 @@
+using System;
+
+
+ 
+
+namespace Claculadora
+
+{
+
+    class Calculadora_v0 
+    {
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("\nMini Calculator v 0.1\n");   //tittle
+
+            string resp = ""; //varible for result of operation
+
+            do
+            {
+
+                int val1 = 0; 
+
+                int val2 = 0;   //varibles for inputs
+
+                int R = 0;  //varible for the option of operator
+
+ 
+
+                //in this menu user choose the operation he wants to do
+
+                Console.WriteLine("\nWhat operation would you like to do?");
+
+                Console.WriteLine("+ for sum");
+
+                Console.WriteLine("- for subtraction");
+
+                Console.WriteLine("* for multiplication");
+
+                Console.WriteLine("/ for division");
+
+                Console.Write("\n pick an option: "); //user indicates the operation we would like to perform
+
+                resp = Console.ReadLine();
+
+                string eleccion = Convert.ToString(resp);
+
+                //now ask fot input
+
+                Console.WriteLine("\nInsert 2 numbers\n");
+
+                Console.Write("val1: ");
+                val1 = int.Parse(Console.ReadLine());
+
+                Console.Write("val2: ");
+
+                val2 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine();
+
+ 
+
+                switch (eleccion)
+                {
+
+                    case "+":
+
+                        Console.WriteLine("The result of the sum:");
+
+                        R = val1 + val2;
+
+                        Console.WriteLine("{0} + {1} = {2}", val1, val2, R);
+
+                        break;
+
+                    case "-":
+
+                        Console.WriteLine("The result of the sum subtraction:");
+
+                        R = val1 - val2;
+
+                        Console.WriteLine("{0} - {1} = {2}", val1, val2, R);
+
+                        break;
+
+                    case "*":
+
+                        Console.WriteLine("the result of the multiplication:");
+
+                        R = val1 * val2;
+
+                        Console.WriteLine("{0} * {1} = {2}", val1, val2, R);
+
+                        break;
+
+                    case "/":
+
+                        Console.WriteLine("the result of the division is:");
+
+                        R = val1 / val2;
+
+                        Console.WriteLine("{0} / {1} = {2}", val1, val2, R);
+
+                        break;
+
+                }
+
+                Console.Write("\n¿Woutld you like to continue? (y/n): "); //continue? options - yes or exit
+
+                resp = Console.ReadLine();
+
+            }while (resp == "y");
+
+            
+
+        }
+
+    }
+
+}
